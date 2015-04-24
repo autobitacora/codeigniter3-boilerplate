@@ -68,7 +68,9 @@ class Productos extends CI_Controller {
       'precio_venta',
       'existencia'
     );
-
+    /*Le cambiamos en nombre al la columna id */
+    $crud->display_as('id','Referencia');
+    //$crud->unset_jquery();
     /* Generamos la tabla */
     $output = $crud->render();
 
