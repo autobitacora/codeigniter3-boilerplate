@@ -23,7 +23,7 @@ class Migration_Create_Usuarios extends CI_Migration {
             )
         );
         $this->dbforge->add_key('id',TRUE);
-        $thid->debforge->create_table('usuarios');
+        $this->dbforge->create_table('usuarios');
     }
     
     public function down(){
