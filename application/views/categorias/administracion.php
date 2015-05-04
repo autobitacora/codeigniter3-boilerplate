@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Administracion Productos</title>
+<title> Administracion Categorias</title>
 <?php
 foreach($css_files as $file): ?>
 <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
@@ -28,7 +28,7 @@ text-decoration: underline;
 </style>
 </head>
 <body>
-<h1>Administración de Productos</h1>
+<h1>Administración de Categorias</h1>
 <div>
 <?php echo $output; ?>
 </div>
