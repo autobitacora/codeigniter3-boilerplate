@@ -6,7 +6,7 @@ class Migration_Create_Categorias extends CI_Migration {
         //Creamos la estructura de una tabla con id y descripcion
         $this->dbforge->add_field(
             array(
-                "id"    =>  array(
+                "categoria"    =>  array(
                     "type"          =>  "INT",
                     "constraint"    =>  11,
                     "unsigned"      =>  TRUE,
@@ -21,7 +21,7 @@ class Migration_Create_Categorias extends CI_Migration {
                 ),
             )
         );
-        $this->dbforge->add_key('id',TRUE);
+        $this->dbforge->add_key('categoria',TRUE);
         $this->dbforge->create_table('categorias', TRUE);
     }
     

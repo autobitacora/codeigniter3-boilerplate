@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-
 class Migration_Create_Gastos extends CI_Migration {
     public function up() {
         //Creamos la estructura de una tabla con id y descripcion
@@ -16,7 +15,7 @@ class Migration_Create_Gastos extends CI_Migration {
                     "type"          =>  "TIMESTAMP",
                 ),
                 "creado_en"     => array(
-                    "type"      => "",
+                    "type"          =>  "TIMESTAMP",
                 ),
                 "descripcion"  =>  array(
                     "type"          =>  "VARCHAR",
@@ -32,6 +31,9 @@ class Migration_Create_Gastos extends CI_Migration {
                     "type"          => "INT",
                     "default"       => 1,
                 ),
+                "categoria"      => array(
+                    "type"          => "INT",
+                ),
             )
         );
         $this->dbforge->add_key('id',TRUE);
@@ -40,6 +42,6 @@ class Migration_Create_Gastos extends CI_Migration {
     
     public function down(){
         //eliminamos la tabla completamente
-        $this->dbforge->drop_table('gastos');
+        $this->dbforge->drop_table('comercios');
     }
 }
