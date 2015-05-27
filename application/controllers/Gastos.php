@@ -98,6 +98,10 @@ class Gastos extends CI_Controller {
     
     // generamos la relacion categorias
     $crud->set_relation('categoria', 'categorias', 'descripcion');
+
+    // generamos la relacion comercios
+    $crud->set_relation('comercio', 'comercios', 'descripcion');
+
     /* Generamos la tabla */
     $output = $crud->render();
 
@@ -116,7 +120,7 @@ class Gastos extends CI_Controller {
   /*
    * Recibe el array de datos a guardar en la tabla y le cambia la fecha
    */
-  function guardar_fecha($post_array){
+   private function guardar_fecha($post_array){
     $post_array['creado_en'] = now();
   }
 }

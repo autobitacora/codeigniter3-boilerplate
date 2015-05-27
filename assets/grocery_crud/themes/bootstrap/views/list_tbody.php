@@ -10,7 +10,7 @@
                     <?php } ?>
                     <div class="btn-group dropdown">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                            More
+                            Mas
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
