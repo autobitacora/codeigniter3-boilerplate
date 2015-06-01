@@ -2,8 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title> Administracion Categorias</title>
 <?php
+//con esto conseguimos el nombre del controlador vigente
+$router =& load_class('Router', 'core');
+$controlador = $this->router->fetch_class();
+//y ahora lo usamos para el titulo
+echo "<title> Administracion ".$controlador."</title>";
 foreach($css_files as $file): ?>
 <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
 <?php endforeach; ?>
@@ -28,7 +32,9 @@ text-decoration: underline;
 </style>
 </head>
 <body>
-<h1>Administración de Categorias</h1>
+<?php
+echo "<h1>Administración de ".ucfirst($controlador)."</h1>";
+?>
 <div>
 <?php echo $output; ?>
 </div>
