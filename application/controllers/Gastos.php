@@ -23,7 +23,7 @@ class Gastos extends CI_Controller {
     redirect('gastos/administracion');
   }
   /*
-   *
+   * Aqui procesamos todo el grid
    **/
   function administracion()
   {
@@ -47,8 +47,8 @@ class Gastos extends CI_Controller {
     /*
      * cambiamos la definicion d efecha a date
      */
-    $crud->field_type('fecha','datetime');
-    $crud->field_type('creado_en', 'datetime');
+    $crud->field_type('fecha','date');
+    $crud->field_type('creado_en', 'date');
     /* Aqui le decimos que el campo del timestamp no sea visible */
     $crud->field_type('creado_en','invisible');
         /* Aqui le decimos con que campos vamos a trabajar-util para el callback */
@@ -81,7 +81,7 @@ class Gastos extends CI_Controller {
       'comercio'
     );
     //las reglas que deben respetar los campos
-    $crud->set_rules('precio_producto', 'Precio', 'decimal');
+    $crud->set_rules('precio_producto', 'Precio', 'numeric');
     $crud->set_rules('cantidad', 'Cantidad', 'is_natural');        
     /*Le cambiamos en nombre al la columna id */
     $crud->display_as('id','Referencia');
