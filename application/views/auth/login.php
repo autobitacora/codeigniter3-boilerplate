@@ -1,7 +1,13 @@
 <h1><?php echo lang('login_heading');?></h1>
 <p><?php echo lang('login_subheading');?></p>
 
-<div id="infoMessage"><?php echo $message;?></div>
+<div id="infoMessage" class="alert alert-danger" role="alert">
+  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+  
+  <?php echo $message;?>
+</div>
+
+<div ></div>
 
 <?php echo form_open("auth/login");?>
 

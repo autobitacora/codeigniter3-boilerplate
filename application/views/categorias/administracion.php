@@ -33,6 +33,8 @@ text-decoration: underline;
 </head>
 <body>
 <?php
+//esto es para poner el nombre de forma adecuada
+//revisar al cambiar el formato...
 echo "<h1>Administración de ".ucfirst($controlador)."</h1>";
 ?>
 <div>
